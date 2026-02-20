@@ -13,7 +13,7 @@ def add_task():
     else:
         messagebox.showwarning("Warning", "Task cannot be empty!")
 
-# function to update task
+# update task
 def update_task():
     selected_task = tasks_listbox.curselection()
     if selected_task:
@@ -25,7 +25,7 @@ def update_task():
     else:
         messagebox.showwarning("Warning", "Please select a task to update!")
 
-# function to delete task
+# delete task
 def delete_task():
     selected_task = tasks_listbox.curselection()
     if selected_task:
@@ -37,20 +37,20 @@ def delete_task():
     else:
         messagebox.showwarning("Warning", "Please select a task to delete!")
 
-# function to view tasks
+# view tasks
 def view_tasks():
     if tasks:
         messagebox.showinfo("All Tasks", "\n".join(tasks))
     else:
         messagebox.showinfo("All Tasks", "No tasks found!")
 
-# function to update the listbox
+# update the listbox
 def update_listbox():
     tasks_listbox.delete(0, tk.END)
     for task in tasks:
         tasks_listbox.insert(tk.END, task)
 
-# function to exit program
+# exit program
 def exit_app():
     root.destroy()
 
@@ -83,5 +83,5 @@ exit_button.pack(pady=5)
 tasks_listbox = tk.Listbox(root, width=40, height=10, font=("Arial", 12))
 tasks_listbox.pack(pady=10)
 
-# run the app
 root.mainloop()
+
